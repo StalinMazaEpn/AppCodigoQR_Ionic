@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      Ionic Barcode Scanner
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div *ngIf="results">
+    <p>{{results.text}}</p>
+    <p>{{results.format}}</p>
+    <p>{{results.cancelled}}</p>
+  </div>
+
+  <button ion-button (click)="scanBarcode()">Scan Barcode</button>
+  <button ion-button (click)="encodeData()">Enconde</button>
+</ion-content>
